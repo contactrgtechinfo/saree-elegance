@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Saree Elegance</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/animations.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span class="brand-text">Saree Elegance</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="shopDropdown" role="button" data-bs-toggle="dropdown">
+                            Shop
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="shop.html?type=silk">Silk Sarees</a></li>
+                            <li><a class="dropdown-item" href="shop.html?type=cotton">Cotton Sarees</a></li>
+                            <li><a class="dropdown-item" href="shop.html?type=banarasi">Banarasi Sarees</a></li>
+                            <li><a class="dropdown-item" href="shop.html?type=party">Party Wear</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link cart-icon" href="cart.html">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Services Header -->
+    <section class="services-header py-5 mt-5">
+        <div class="container">
+            <h1 class="text-center mb-4" data-aos="fade-up">Our Services</h1>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <p class="text-center mb-5 lead" data-aos="fade-up" data-aos-delay="200">
+                        We offer a range of premium services to enhance your shopping experience and ensure your complete satisfaction.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Services -->
+    <section class="main-services py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Custom Blouse Stitching -->
+                <div class="col-md-6 mb-4" data-aos="fade-up">
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="images/services/blouse-stitching.jpg" alt="Custom Blouse Stitching" class="img-fluid">
+                        </div>
+                        <div class="service-content">
+                            <h3><i class="fas fa-cut"></i> Custom Blouse Stitching</h3>
+                            <p>Get your blouse perfectly tailored by our expert craftsmen. We ensure:</p>
+                            <ul>
+                                <li>Perfect fit guarantee</li>
+                                <li>Multiple design options</li>
+                                <li>Premium fabric selection</li>
+                                <li>Quick turnaround time</li>
+                            </ul>
+                            <a href="#" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Express Delivery -->
+                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="images/services/express-delivery.jpg" alt="Express Delivery" class="img-fluid">
+                        </div>
+                        <div class="service-content">
+                            <h3><i class="fas fa-shipping-fast"></i> Express Delivery</h3>
+                            <p>Quick and secure delivery to your doorstep:</p>
+                            <ul>
+                                <li>Same-day delivery in select cities</li>
+                                <li>International shipping</li>
+                                <li>Real-time tracking</li>
+                                <li>Secure packaging</li>
+                            </ul>
+                            <a href="#" class="btn btn-primary">Check Coverage</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Personal Styling -->
+                <div class="col-md-6 mb-4" data-aos="fade-up">
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="images/services/personal-styling.jpg" alt="Personal Styling" class="img-fluid">
+                        </div>
+                        <div class="service-content">
+                            <h3><i class="fas fa-user-tie"></i> Personal Styling</h3>
+                            <p>Get expert advice from our fashion consultants:</p>
+                            <ul>
+                                <li>One-on-one consultation</li>
+                                <li>Style recommendations</li>
+                                <li>Occasion-based suggestions</li>
+                                <li>Color and pattern matching</li>
+                            </ul>
+                            <a href="#" class="btn btn-primary">Book Consultation</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Alteration Services -->
+                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="images/services/alterations.jpg" alt="Alteration Services" class="img-fluid">
+                        </div>
+                        <div class="service-content">
+                            <h3><i class="fas fa-scissors"></i> Alteration Services</h3>
+                            <p>Professional alteration services for the perfect fit:</p>
+                            <ul>
+                                <li>Length adjustments</li>
+                                <li>Fall and pico</li>
+                                <li>Blouse alterations</li>
+                                <li>Quick service</li>
+                            </ul>
+                            <a href="#" class="btn btn-primary">Schedule Alteration</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Offers -->
+    <section class="special-offers py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5" data-aos="fade-up">Special Offers</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4" data-aos="fade-up">
+                    <div class="offer-card text-center">
+                        <div class="offer-icon">
+                            <i class="fas fa-gift"></i>
+                        </div>
+                        <h3>Festive Season Discount</h3>
+                        <p>Get up to 20% off on blouse stitching during festival season</p>
+                        <a href="#" class="btn btn-outline-primary">View Offer</a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="offer-card text-center">
+                        <div class="offer-icon">
+                            <i class="fas fa-tags"></i>
+                        </div>
+                        <h3>Bulk Order Benefits</h3>
+                        <p>Special pricing for bulk orders and wedding collections</p>
+                        <a href="#" class="btn btn-outline-primary">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="offer-card text-center">
+                        <div class="offer-icon">
+                            <i class="fas fa-percent"></i>
+                        </div>
+                        <h3>First-Time Customer</h3>
+                        <p>15% off on your first alteration service</p>
+                        <a href="#" class="btn btn-outline-primary">Claim Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Process -->
+    <section class="service-process py-5">
+        <div class="container">
+            <h2 class="text-center mb-5" data-aos="fade-up">How It Works</h2>
+            <div class="row">
+                <div class="col-md-3 mb-4" data-aos="fade-up">
+                    <div class="process-step text-center">
+                        <div class="step-number">1</div>
+                        <h4>Book Service</h4>
+                        <p>Choose your desired service and schedule an appointment</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="process-step text-center">
+                        <div class="step-number">2</div>
+                        <h4>Consultation</h4>
+                        <p>Meet with our expert team for detailed discussion</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="process-step text-center">
+                        <div class="step-number">3</div>
+                        <h4>Service Delivery</h4>
+                        <p>Our team works on your requirements</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="600">
+                    <div class="process-step text-center">
+                        <div class="step-number">4</div>
+                        <h4>Final Delivery</h4>
+                        <p>Receive your perfectly finished product</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-light py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h3>About Us</h3>
+                    <p>Discover the finest collection of traditional and contemporary sarees, crafted with love and dedication.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h3>Quick Links</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h3>Connect With Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2023 Saree Elegance. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

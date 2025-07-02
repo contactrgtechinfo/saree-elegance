@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generate Service Images</title>
+</head>
+<body>
+    <canvas id="serviceCanvas" width="800" height="600"></canvas>
+    <script>
+        const canvas = document.getElementById('serviceCanvas');
+        const ctx = canvas.getContext('2d');
+
+        // Function to generate service images
+        function generateServiceImage(name, iconType) {
+            // Clear canvas
+            ctx.fillStyle = '#f8f8f8';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // Add gradient background
+            const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+            gradient.addColorStop(0, '#8B0D32');
+            gradient.addColorStop(1, '#D4AF37');
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // Add overlay
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.3)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // Draw icon based on service type
+            ctx.strokeStyle = '#FFFFFF';
+            ctx.lineWidth = 8;
+            ctx.fillStyle = '#FFFFFF';
+
+            const centerX = canvas.width / 2;
+            const centerY = canvas.height / 2;
+
+            switch(iconType) {
+                case 'blouse':
+                    // Blouse stitching icon
+                    ctx.beginPath();
+                    ctx.moveTo(centerX - 100, centerY - 50);
+                    ctx.lineTo(centerX + 100, centerY - 50);
+                    ctx.lineTo(centerX + 50, centerY + 100);
+                    ctx.lineTo(centerX - 50, centerY + 100);
+                    ctx.closePath();
+                    ctx.stroke();
+                    break;
+
+                case 'delivery':
+                    // Express delivery icon
+                    ctx.beginPath();
+                    ctx.moveTo(centerX - 100, centerY);
+                    ctx.lineTo(centerX + 100, centerY);
+                    ctx.moveTo(centerX + 70, centerY - 30);
+                    ctx.lineTo(centerX + 100, centerY);
+                    ctx.lineTo(centerX + 70, centerY + 30);
+                    ctx.stroke();
+                    break;
+
+                case 'styling':
+                    // Personal styling icon
+                    ctx.beginPath();
+                    ctx.arc(centerX, centerY - 50, 30, 0, Math.PI * 2);
+                    ctx.moveTo(centerX, centerY - 20);
+                    ctx.lineTo(centerX, centerY + 50);
+                    ctx.moveTo(centerX - 50, centerY);
+                    ctx.lineTo(centerX + 50, centerY);
+                    ctx.stroke();
+                    break;
+
+                case 'alterations':
+                    // Alterations icon
+                    ctx.beginPath();
+                    ctx.moveTo(centerX - 50, centerY - 50);
+                    ctx.lineTo(centerX + 50, centerY + 50);
+                    ctx.moveTo(centerX + 50, centerY - 50);
+                    ctx.lineTo(centerX - 50, centerY + 50);
+                    ctx.stroke();
+                    break;
+            }
+
+            // Add text
+            ctx.font = 'bold 48px Playfair Display';
+            ctx.textAlign = 'center';
+            ctx.fillText(name, centerX, canvas.height - 50);
+
+            // Download image
+            const link = document.createElement('a');
+            link.download = `${name.toLowerCase().replace(' ', '-')}.jpg`;
+            link.href = canvas.toDataURL('image/jpeg', 0.9);
+            link.click();
+        }
+
+        // Generate all service images
+        const services = [
+            { name: 'blouse-stitching', icon: 'blouse' },
+            { name: 'express-delivery', icon: 'delivery' },
+            { name: 'personal-styling', icon: 'styling' },
+            { name: 'alterations', icon: 'alterations' }
+        ];
+
+        services.forEach(service => {
+            generateServiceImage(service.name, service.icon);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generate Team and About Images</title>
+</head>
+<body>
+    <canvas id="imageCanvas" width="600" height="600"></canvas>
+    <script>
+        const canvas = document.getElementById('imageCanvas');
+        const ctx = canvas.getContext('2d');
+
+        // Function to generate team member avatar
+        function generateTeamAvatar(name, role) {
+            // Clear canvas
+            ctx.fillStyle = '#FFFFFF';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // Create gradient background
+            const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+            gradient.addColorStop(0, '#8B0D32');
+            gradient.addColorStop(1, '#D4AF37');
+            
+            // Draw circle for avatar
+            ctx.beginPath();
+            ctx.arc(canvas.width/2, canvas.height/2, 250, 0, Math.PI * 2);
+            ctx.fillStyle = gradient;
+            ctx.fill();
+
+            // Add initials
+            ctx.font = 'bold 120px Playfair Display';
+            ctx.fillStyle = '#FFFFFF';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText(name.charAt(0), canvas.width/2, canvas.height/2);
+
+            // Add decorative border
+            ctx.strokeStyle = '#FFFFFF';
+            ctx.lineWidth = 10;
+            ctx.beginPath();
+            ctx.arc(canvas.width/2, canvas.height/2, 260, 0, Math.PI * 2);
+            ctx.stroke();
+
+            // Download image
+            const link = document.createElement('a');
+            link.download = `${name.toLowerCase().replace(' ', '-')}.jpg`;
+            link.href = canvas.toDataURL('image/jpeg', 0.9);
+            link.click();
+        }
+
+        // Function to generate about page story image
+        function generateStoryImage() {
+            // Clear canvas
+            ctx.fillStyle = '#FFFFFF';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // Create gradient background
+            const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+            gradient.addColorStop(0, '#8B0D32');
+            gradient.addColorStop(1, '#D4AF37');
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // Add decorative pattern
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.2)';
+            ctx.lineWidth = 2;
+            
+            for(let i = 0; i < canvas.width; i += 30) {
+                for(let j = 0; j < canvas.height; j += 30) {
+                    ctx.beginPath();
+                    ctx.arc(i, j, 10, 0, Math.PI * 2);
+                    ctx.stroke();
+                }
+            }
+
+            // Add text overlay
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.5)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.font = 'bold 48px Playfair Display';
+            ctx.fillStyle = '#FFFFFF';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText('Our Story', canvas.width/2, canvas.height/2);
+
+            // Download image
+            const link = document.createElement('a');
+            link.download = 'story.jpg';
+            link.href = canvas.toDataURL('image/jpeg', 0.9);
+            link.click();
+        }
+
+        // Generate team member images
+        const team = [
+            { name: 'Member1', role: 'CEO' },
+            { name: 'Member2', role: 'Creative Director' },
+            { name: 'Member3', role: 'Head of Design' },
+            { name: 'Member4', role: 'Customer Relations' }
+        ];
+
+        // Generate team avatars
+        team.forEach(member => {
+            generateTeamAvatar(member.name, member.role);
+        });
+
+        // Generate story image
+        generateStoryImage();
+    </script>
+</body>
+</html>

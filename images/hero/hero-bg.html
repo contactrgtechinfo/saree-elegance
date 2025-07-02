@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generate Hero Background</title>
+</head>
+<body>
+    <canvas id="heroCanvas" width="1920" height="1080"></canvas>
+    <script>
+        const canvas = document.getElementById('heroCanvas');
+        const ctx = canvas.getContext('2d');
+
+        // Create gradient
+        const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
+        gradient.addColorStop(0, '#8B0D32');
+        gradient.addColorStop(1, '#D4AF37');
+
+        // Fill background
+        ctx.fillStyle = gradient;
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        // Add some decorative elements
+        ctx.strokeStyle = 'rgba(255, 255, 255, 0.1)';
+        ctx.lineWidth = 2;
+
+        // Draw decorative patterns
+        for(let i = 0; i < 20; i++) {
+            ctx.beginPath();
+            ctx.moveTo(Math.random() * canvas.width, 0);
+            ctx.lineTo(Math.random() * canvas.width, canvas.height);
+            ctx.stroke();
+        }
+
+        // Convert to image
+        const link = document.createElement('a');
+        link.download = 'hero-bg.jpg';
+        link.href = canvas.toDataURL('image/jpeg', 0.9);
+        link.click();
+    </script>
+</body>
+</html>

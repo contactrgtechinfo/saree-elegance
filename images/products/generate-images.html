@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generate Product Images</title>
+</head>
+<body>
+    <canvas id="productCanvas" width="800" height="1200"></canvas>
+    <script>
+        const canvas = document.getElementById('productCanvas');
+        const ctx = canvas.getContext('2d');
+
+        // Function to generate a saree pattern
+        function generateSareePattern(color1, color2, patternType) {
+            ctx.fillStyle = color1;
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // Add pattern based on type
+            ctx.strokeStyle = color2;
+            ctx.lineWidth = 3;
+
+            if (patternType === 'geometric') {
+                // Geometric pattern
+                for(let i = 0; i < canvas.width; i += 50) {
+                    for(let j = 0; j < canvas.height; j += 50) {
+                        ctx.beginPath();
+                        ctx.rect(i, j, 40, 40);
+                        ctx.stroke();
+                    }
+                }
+            } else if (patternType === 'floral') {
+                // Floral pattern
+                for(let i = 0; i < canvas.width; i += 100) {
+                    for(let j = 0; j < canvas.height; j += 100) {
+                        ctx.beginPath();
+                        ctx.arc(i, j, 30, 0, Math.PI * 2);
+                        ctx.stroke();
+                        
+                        // Add petals
+                        for(let k = 0; k < 6; k++) {
+                            ctx.beginPath();
+                            ctx.ellipse(i, j, 20, 40, k * Math.PI / 3, 0, Math.PI * 2);
+                            ctx.stroke();
+                        }
+                    }
+                }
+            } else {
+                // Traditional pattern
+                for(let i = 0; i < canvas.width; i += 60) {
+                    for(let j = 0; j < canvas.height; j += 60) {
+                        ctx.beginPath();
+                        ctx.moveTo(i, j);
+                        ctx.lineTo(i + 40, j + 40);
+                        ctx.moveTo(i + 40, j);
+                        ctx.lineTo(i, j + 40);
+                        ctx.stroke();
+                    }
+                }
+            }
+
+            // Add border
+            ctx.strokeStyle = color2;
+            ctx.lineWidth = 20;
+            ctx.strokeRect(10, 10, canvas.width - 20, canvas.height - 20);
+        }
+
+        // Generate three different saree images
+        const patterns = [
+            {
+                name: 'featured-1',
+                color1: '#8B0D32',
+                color2: '#D4AF37',
+                pattern: 'geometric'
+            },
+            {
+                name: 'featured-2',
+                color1: '#006064',
+                color2: '#D4AF37',
+                pattern: 'floral'
+            },
+            {
+                name: 'featured-3',
+                color1: '#4A0404',
+                color2: '#D4AF37',
+                pattern: 'traditional'
+            }
+        ];
+
+        // Generate and download each pattern
+        patterns.forEach(pattern => {
+            generateSareePattern(pattern.color1, pattern.color2, pattern.pattern);
+            
+            // Download image
+            const link = document.createElement('a');
+            link.download = `${pattern.name}.jpg`;
+            link.href = canvas.toDataURL('image/jpeg', 0.9);
+            link.click();
+        });
+    </script>
+</body>
+</html>

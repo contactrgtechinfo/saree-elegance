@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegance Woven in Tradition | Luxury Sarees</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/animations.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span class="brand-text">Saree Elegance</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="shopDropdown" role="button" data-bs-toggle="dropdown">
+                            Shop
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="shop.html?type=silk">Silk Sarees</a></li>
+                            <li><a class="dropdown-item" href="shop.html?type=cotton">Cotton Sarees</a></li>
+                            <li><a class="dropdown-item" href="shop.html?type=banarasi">Banarasi Sarees</a></li>
+                            <li><a class="dropdown-item" href="shop.html?type=party">Party Wear</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link cart-icon" href="cart.html">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="main-title" data-aos="fade-up">Elegance Woven in Tradition</h1>
+            <p class="subtitle" data-aos="fade-up" data-aos-delay="200">
+                Discover the finest collection of handcrafted sarees
+            </p>
+            <a href="shop.html" class="btn btn-primary btn-lg shop-now" data-aos="fade-up" data-aos-delay="400">
+                Shop Now
+            </a>
+        </div>
+    </section>
+
+    <!-- Featured Collection -->
+    <section class="featured-collection py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-aos="fade-up">Featured Collection</h2>
+            <div class="row">
+                <!-- Featured Product 1 -->
+                <div class="col-md-4 mb-4" data-aos="fade-up">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/products/featured-1.jpg" alt="Silk Saree" class="img-fluid">
+                            <div class="product-overlay">
+                                <a href="product-detail.html" class="btn btn-outline-light">View Details</a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Royal Silk Saree</h3>
+                            <p class="price">₹12,999</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Featured Product 2 -->
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/products/featured-2.jpg" alt="Banarasi Saree" class="img-fluid">
+                            <div class="product-overlay">
+                                <a href="product-detail.html" class="btn btn-outline-light">View Details</a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Banarasi Wonder</h3>
+                            <p class="price">₹15,999</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Featured Product 3 -->
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/products/featured-3.jpg" alt="Designer Saree" class="img-fluid">
+                            <div class="product-overlay">
+                                <a href="product-detail.html" class="btn btn-outline-light">View Details</a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Designer Collection</h3>
+                            <p class="price">₹18,999</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Highlight -->
+    <section class="services-highlight bg-light py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 text-center mb-4" data-aos="fade-up">
+                    <i class="fas fa-shipping-fast service-icon"></i>
+                    <h3>Express Delivery</h3>
+                    <p>Fast and secure shipping across India</p>
+                </div>
+                <div class="col-md-4 text-center mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-cut service-icon"></i>
+                    <h3>Custom Stitching</h3>
+                    <p>Professional blouse stitching service</p>
+                </div>
+                <div class="col-md-4 text-center mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <i class="fas fa-exchange-alt service-icon"></i>
+                    <h3>Easy Returns</h3>
+                    <p>30-day hassle-free return policy</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 text-center">
+                    <h2 data-aos="fade-up">Subscribe to Our Newsletter</h2>
+                    <p data-aos="fade-up" data-aos-delay="200">Stay updated with our latest collections and exclusive offers</p>
+                    <form class="newsletter-form" data-aos="fade-up" data-aos-delay="400">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Enter your email">
+                            <button class="btn btn-primary" type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-light py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h3>About Us</h3>
+                    <p>Discover the finest collection of traditional and contemporary sarees, crafted with love and dedication.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h3>Quick Links</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h3>Connect With Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2023 Saree Elegance. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>
